@@ -13,14 +13,10 @@ import { ExpensesComponent } from './expenses/expenses.component';
     AppComponent,
     HeroComponent,
     InputComponent,
-    ExpensesComponent
+    ExpensesComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    ReactiveFormsModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

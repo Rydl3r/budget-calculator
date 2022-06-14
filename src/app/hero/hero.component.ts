@@ -4,22 +4,19 @@ import { Expense } from '../../models/Expense';
 @Component({
   selector: 'app-hero',
   templateUrl: './hero.component.html',
-  styleUrls: ['./hero.component.scss']
+  styleUrls: ['./hero.component.scss'],
 })
 export class HeroComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
-  }
-
-  expenses: Expense[] = []
+  expenses: Expense[] = [];
 
   totalBudget: number = 0;
 
   addItem(newItem: Expense) {
-    this.expenses.unshift(newItem)
-    this.totalBudget += newItem.value
+    this.expenses.unshift(newItem);
+    this.totalBudget += newItem.value;
   }
-
 }

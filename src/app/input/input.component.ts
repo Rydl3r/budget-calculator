@@ -5,29 +5,26 @@ import { Expense } from '../../models/Expense';
 @Component({
   selector: 'app-input',
   templateUrl: './input.component.html',
-  styleUrls: ['./input.component.scss']
+  styleUrls: ['./input.component.scss'],
 })
 export class InputComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   inputForm = new FormGroup({
     description: new FormControl(),
     value: new FormControl(),
-  })
+  });
 
   @Output() inputDataEmitter = new EventEmitter<Expense>();
 
   onSubmit() {
     if (this.inputForm.valid) {
-      this.inputDataEmitter.emit(this.inputForm.value)
-      this.inputForm.reset()
+      this.inputDataEmitter.emit(this.inputForm.value);
+      this.inputForm.reset();
     } else {
-      alert('The input is invalid. Please, try again')
+      alert('The input is invalid. Please, try again');
     }
-
   }
 }

@@ -1,9 +1,9 @@
 <div class="container">
-    <div class="hero_title">
-        <h1>Your Total Budget: {{totalBudget}}$</h1>
-    </div>
+  <div class="hero_title">
+    <h1>Your Total Budget: {{ totalBudget }}$</h1>
+  </div>
 
-    <app-input (inputDataEmitter)="addItem($event)"></app-input>
+  <app-input (inputDataEmitter)="addItem($event)"></app-input>
 
-    <app-expenses [expenses]="expenses"></app-expenses>
+  <app-expenses [expenses]="expenses"></app-expenses>
 </div>

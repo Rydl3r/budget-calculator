@@ -1,12 +1,17 @@
 <div *ngIf="expenses.length == 0">
-    No expenses found yet! Try typing something!
+  No expenses found yet! Try typing something!
 </div>
 <div class="" *ngIf="expenses.length > 0">
-    <div class="expenses" *ngFor="let expense of expenses">
-        <div [ngClass]="{'expense_positive': expense.value >= 0, 'expense_negative': expense.value < 0}"
-            class="expense">
-            <div class="expense_value">{{expense.value}} $</div>
-            <div class="expense_description">{{expense.description}}</div>
-        </div>
+  <div class="expenses" *ngFor="let expense of expenses">
+    <div
+      [ngClass]="{
+        expense_positive: expense.value >= 0,
+        expense_negative: expense.value < 0
+      }"
+      class="expense"
+    >
+      <div class="expense_value">{{ expense.value }} $</div>
+      <div class="expense_description">{{ expense.description }}</div>
     </div>
+  </div>
 </div>
